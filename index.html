@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flexi's Boiled Icing Ice Cream Recipe</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Splash screen */
+    #splash {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 8px rgba(0,0,0,0.7);
+      z-index: 9999;
+      transition: opacity 0.7s ease;
+    }
+    #splash h1 {
+      font-size: 3rem;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    #splash p {
+      font-size: 1.5rem;
+      margin: 0 0 30px;
+      font-style: italic;
+    }
+    #splash button {
+      background: #ff6f61;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+    #splash button:hover {
+      background: #e35b4f;
+    }
+
+    /* Main content */
+    main {
+      max-width: 800px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #b34700;
+      font-weight: 700;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffac81;
+      padding-bottom: 5px;
+    }
+
+    /* Recipe list */
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    /* Step images */
+    .step-image {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 15px 0 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #777;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      #splash h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash screen -->
+  <div id="splash">
+    <h1>Flexi's Boiled Icing Ice Cream</h1>
+    <p>Delicious homemade ice cream recipe with step-by-step images</p>
+    <button id="startBtn">See Recipe</button>
+  </div>
+
+  <!-- Main content -->
+  <main aria-label="Ice cream recipe content" hidden>
+    <h1>Boiled Icing Ice Cream Recipe</h1>
+
+    <section>
+      <h2>Ingredients</h2>
+      <h3>For the Boiled Icing (Italian Meringue):</h3>
+      <ul>
+        <li>4 large egg whites (room temperature)</li>
+        <li>200 g granulated sugar</li>
+        <li>60 ml water</li>
+      </ul>
+
+      <h3>For the Thick Base:</h3>
+      <ul>
+        <li>100 g milk powder</li>
+        <li>400 ml water (cold or room temperature)</li>
+        <li>2 tbsp cornflour (cornstarch)</li>
+        <li>1 tsp vanilla extract</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instructions</h2>
+
+      <h3>Step 1: Prepare the Thick Milk Powder Base</h3>
+      <ol>
+        <li>In a mixing bowl, combine the milk powder and cornflour.</li>
+        <li>Gradually add about 300 ml of water to the dry mix while stirring to form a smooth slurry.</li>
+        <li>Pour the remaining 100 ml water into a saucepan and heat gently over medium heat until warm (not boiling).</li>
+        <li>Slowly pour the slurry into the warm water in the saucepan while stirring continuously.</li>
+        <li>Cook over medium heat, stirring constantly until thickened (5-8 minutes).</li>
+        <li>Remove from heat and let cool to room temperature, then stir in vanilla extract.</li>
+        <li>Chill in the fridge while preparing the boiled icing.</li>
+      </ol>
+      <img
+        class="step-image"
+        src="https://images.unsplash.com/photo-1590080877777-9e6af26f13b8?auto=format&fit=crop&w=800&q=80"
+        alt="Mixing milk powder and cornflour to make slurry"
+      />
+
+      <h3>Step 2: Make the Boiled Icing (Italian Meringue)</h3>
+      <ol>
+        <li>Beat egg whites on medium speed until soft peaks form.</li>
+        <li>Combine sugar and water in a saucepan.</li>
+        <li>Heat sugar syrup without stirring until it reaches soft ball stage (~115°C / 240°F).</li>
+        <li>Remove syrup from heat immediately.</li>
+        <li>With mixer running, carefully pour hot syrup into beaten egg whites in a thin stream.</li>
+        <li>Continue beating until glossy, thick, and cool to room temperature (7-10 minutes).</li>
+      </ol>
+      <img
+        class="step-image"
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+        alt="Whipping egg whites and sugar syrup to make meringue"
+      />
+
+      <h3>Step 3: Combine & Fold</h3>
+      <ol>
+        <li>Gently fold chilled milk powder base into the boiled icing using a spatula.</li>
+        <li>Fold carefully to keep the mixture light and airy.</li>
+        <li>Taste and adjust vanilla if needed.</li>
+      </ol>
+      <img
+        class="step-image"
+        src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+        alt="Folding ice cream base into meringue mixture"
+      />
+
+      <h3>Step 4: Freeze</h3>
+      <ol>
+        <li>Transfer mixture into freezer-safe container.</li>
+        <li>Cover tightly and freeze at least 4-6 hours or overnight.</li>
+        <li>For smoother texture, stir every hour during first 3 hours to break ice crystals.</li>
+      </ol>
+      <img
+        class="step-image"
+        src="https://images.unsplash.com/photo-1505253210340-9d7d6b5f48a3?auto=format&fit=crop&w=800&q=80"
+        alt="Homemade ice cream freezing in container"
+      />
+    </section>
+
+    <section>
+      <h2>Tips & Variations</h2>
+      <ul>
+        <li>Add cocoa powder, fruit, or chocolate chips during folding for flavor.</li>
+        <li>Substitute some water with cream or condensed milk for extra richness.</li>
+        <li>Use pasteurized egg whites for safety if preferred.</li>
+        <li>Serve shortly after freezing or let sit a few minutes before scooping for softer texture.</li>
+      </ul>
+    </section>
+  </main>
+
+ 
+    
+  <footer>
+      &copy; 2025 Boiled Icing Ice cream Project.  Built With ♥️ by <a href="https://flexi-spec.github.io/Portfolio-/" target="_blank">Flexi Dev Studio</a>
+</footer>
+ 
+
+  <script>
+    const splash = document.getElementById('splash');
+    const mainContent = document.querySelector('main');
+    const startBtn = document.getElementById('startBtn');
+
+    startBtn.addEventListener('click', () => {
+      splash.style.opacity = '0';
+      setTimeout(() => {
+        splash.style.display = 'none';
+        mainContent.removeAttribute('hidden');
+        window.scrollTo(0, 0);
+      }, 700);
+    });
+  </script>
+</body>
+</html>
